@@ -1,6 +1,6 @@
 package me.chanjar.weixin.cp.bean.kf;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -22,7 +22,7 @@ public class WxCpKfAccountDel implements Serializable {
    * 客服帐号ID。
    * 不多于64字节
    */
-  @JsonProperty("open_kfid")
+  @SerializedName("open_kfid")
   private String openKfid;
 
 }

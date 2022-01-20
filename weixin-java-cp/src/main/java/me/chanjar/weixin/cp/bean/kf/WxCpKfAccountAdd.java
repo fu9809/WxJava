@@ -1,6 +1,6 @@
 package me.chanjar.weixin.cp.bean.kf;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,13 +21,13 @@ public class WxCpKfAccountAdd implements Serializable {
   /**
    * 客服名称；不多于16个字符
    */
-  @JsonProperty("name")
+  @SerializedName("name")
   private String name;
 
   /**
    * 客服头像临时素材。可以调用上传临时素材接口获取。
    * 不多于128个字节
    */
-  @JsonProperty("media_id")
+  @SerializedName("media_id")
   private String mediaId;
 }

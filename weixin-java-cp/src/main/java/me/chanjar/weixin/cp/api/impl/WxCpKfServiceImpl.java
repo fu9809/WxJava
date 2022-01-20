@@ -56,7 +56,7 @@ public class WxCpKfServiceImpl implements WxCpKfService {
 
   @Override
   public WxCpKfAccountLinkResp getAccountLink(WxCpKfAccountLink link) throws WxErrorException {
-    String url = cpService.getWxCpConfigStorage().getApiUrl(ACCOUNT_LINK);
+    String url = cpService.getWxCpConfigStorage().getApiUrl(ADD_CONTACT_WAY);
     String responseContent = cpService.post(url, WxCpGsonBuilder.create().toJson(link));
     return WxCpKfAccountLinkResp.fromJson(responseContent);
   }

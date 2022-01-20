@@ -1,6 +1,6 @@
 package me.chanjar.weixin.cp.bean.kf;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -23,7 +23,7 @@ public class WxCpKfAccountLinkResp extends WxCpBaseResp {
   /**
    * 客服链接，开发者可将该链接嵌入到H5页面中，用户点击链接即可向对应的微信客服帐号发起咨询。开发者也可根据该url自行生成需要的二维码图片
    */
-  @JsonProperty("url")
+  @SerializedName("url")
   private String url;
 
   public static WxCpKfAccountLinkResp fromJson(String json) {

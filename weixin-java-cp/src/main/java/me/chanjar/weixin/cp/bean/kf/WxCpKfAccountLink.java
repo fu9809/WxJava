@@ -1,6 +1,6 @@
 package me.chanjar.weixin.cp.bean.kf;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,7 +21,7 @@ public class WxCpKfAccountLink implements Serializable {
   /**
    * 客服帐号ID
    */
-  @JsonProperty("open_kfid")
+  @SerializedName("open_kfid")
   private String openKfid;
 
   /**
@@ -35,6 +35,6 @@ public class WxCpKfAccountLink implements Serializable {
    * 2. 历史调用接口返回的客服链接（包含encScene=XXX参数），不支持scene_param参数。
    * 3. 返回的客服链接，不能修改或复制参数到其他链接使用。否则进入会话事件参数校验不通过，导致无法回调。
    */
-  @JsonProperty("scene")
+  @SerializedName("scene")
   private String scene;
 }

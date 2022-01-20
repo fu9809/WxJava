@@ -1,6 +1,6 @@
 package me.chanjar.weixin.cp.bean.kf;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -23,7 +23,7 @@ public class WxCpKfAccountAddResp extends WxCpBaseResp {
   /**
    * 新创建的客服帐号ID
    */
-  @JsonProperty("open_kfid")
+  @SerializedName("open_kfid")
   private String openKfid;
 
   public static WxCpKfAccountAddResp fromJson(String json) {
